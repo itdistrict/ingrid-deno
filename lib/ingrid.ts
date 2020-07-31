@@ -32,6 +32,7 @@ class IngridResponseData {
     List?: IngridData[];
 
     constructor() {
+        this.List = new Array<IngridData>();
     }
 }
 
