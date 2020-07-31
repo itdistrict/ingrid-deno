@@ -1,8 +1,7 @@
-class Response {
+class BaseResponse {
     status: string;
     status_code: number;
     options: Record<string, string>;
-    data: any;
 
     constructor() {
         this.status = "Successfully processed";
@@ -11,8 +10,33 @@ class Response {
     }
 }
 
-type Data = {
+class IngridResponse extends BaseResponse {
+    data: IngridResponseData;
+
+    constructor() {
+        super();
+        this.data = new IngridResponseData();
+    }
+}
+
+class Response extends BaseResponse {
+    data: any;
+
+    constructor() {
+        super();
+    }
+}
+
+class IngridResponseData {
+    Data?: IngridData;
+    List?: IngridData[];
+
+    constructor() {
+    }
+}
+
+type IngridData = {
     [name: string]: string[]
 };
 
-export { Response, Data }
+export { Response, IngridResponse, IngridResponseData, IngridData }
