@@ -11,11 +11,11 @@ class BaseResponse {
 }
 
 class IngridResponse extends BaseResponse {
-    data: IngridResponseData;
+    data: IngridResult;
 
     constructor() {
         super();
-        this.data = new IngridResponseData();
+        this.data = new IngridResult();
     }
 }
 
@@ -27,11 +27,12 @@ class Response extends BaseResponse {
     }
 }
 
-class IngridResponseData {
+class IngridResult {
     Data?: IngridData;
     List?: IngridData[];
 
     constructor() {
+        this.Data = {};
         this.List = new Array<IngridData>();
     }
 }
@@ -40,4 +41,4 @@ type IngridData = {
     [name: string]: string[]
 };
 
-export { Response, IngridResponse, IngridResponseData, IngridData }
+export { Response, IngridResponse, IngridResult, IngridData }
