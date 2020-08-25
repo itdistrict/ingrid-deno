@@ -28,6 +28,9 @@ class Response extends BaseResponse {
 }
 
 class IngridResult {
+    Class?: string;
+    Operation?: string;
+    Control?: IngridData;
     Data?: IngridData;
     List?: IngridData[];
 
