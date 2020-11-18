@@ -44,5 +44,4 @@ type IngridData = {
     [name: string]: string[]
 };
 
-export { Response, IngridResponse, IngridResult }
-export type { IngridData }
+export { Response, IngridResponse, IngridResult, IngridData }
