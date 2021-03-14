@@ -36,6 +36,7 @@ class IngridMsg {
     Result?: IngridResult;
 
     constructor() {
+        this.Control = {};
         this.Data = {};
         this.List = new Array<IngridData>();
     }
@@ -46,6 +47,12 @@ class IngridResult {
     Control?: IngridData;
     Data?: IngridData;
     List?: IngridData[];
+    
+    constructor() {
+        this.Control = {};
+        this.Data = {};
+        this.List = new Array<IngridData>();
+    }
 }
 
 type IngridData = {
