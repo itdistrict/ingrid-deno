@@ -33,7 +33,7 @@ class IngridMsg {
     Control?: IngridData;
     Data?: IngridData;
     List?: IngridData[];
-    Result: IngridResult;
+    Result?: IngridResult;
 
     constructor() {
         this.Data = {};
